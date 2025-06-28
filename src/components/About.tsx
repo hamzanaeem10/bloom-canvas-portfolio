@@ -4,24 +4,44 @@ import React from 'react';
 const About = () => {
   const skills = [
     {
-      title: 'ML/AI Engineer',
-      icon: '🔷',
+      title: 'Python Developer',
+      icon: '🐍',
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Python Developer',
-      icon: '🔶',
+      title: 'Machine Learning',
+      icon: '🤖',
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'MLOps Engineer',
-      icon: '🔸',
+      title: 'Data Warehousing',
+      icon: '🏗️',
       color: 'from-teal-500 to-green-500',
     },
     {
-      title: 'Music Composer',
-      icon: '💎',
+      title: 'Data Visualization',
+      icon: '📊',
       color: 'from-indigo-500 to-blue-500',
+    },
+    {
+      title: 'Big Data',
+      icon: '💾',
+      color: 'from-orange-500 to-red-500',
+    },
+    {
+      title: 'Deep Learning',
+      icon: '🧠',
+      color: 'from-green-500 to-teal-500',
+    },
+    {
+      title: 'ETL',
+      icon: '⚙️',
+      color: 'from-yellow-500 to-orange-500',
+    },
+    {
+      title: 'Microsoft Azure',
+      icon: '☁️',
+      color: 'from-blue-600 to-purple-600',
     },
   ];
 
@@ -35,9 +55,11 @@ const About = () => {
           </h2>
           <div className="max-w-4xl">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Developer turned Machine Learning Engineer, I tailor and implement data driven solutions 
-              to help breakthrough domains. My passion of maths backing ML/AI helps me design 
-              solutions that are just right.
+              Data Science student at COMSATS University Islamabad with hands-on experience in machine learning, 
+              data warehousing, and business intelligence. Currently working as a Data Analyst Intern at Troon Technologies, 
+              where I preprocess and analyze datasets from multiple sources using Pandas, SQL, and Power BI. 
+              I'm passionate about creating interactive visualizations and implementing data-driven solutions 
+              that help organizations make informed decisions.
             </p>
           </div>
         </div>

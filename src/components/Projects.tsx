@@ -4,25 +4,32 @@ import React from 'react';
 const Projects = () => {
   const projects = [
     {
-      title: 'Satori',
-      category: 'Healthcare',
-      description: 'With Data Science at center, a well-being ecosystem aiming at encouraging users to build sustainable habits to thrive. We focus on well-being from a whole-person perspective.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop',
-      tags: ['#python', '#scikit-learn', '#NLTK'],
-    },
-    {
-      title: 'Neural Q',
-      category: 'Audio Tech',
-      description: 'Using AI, we train a model from an analog device by feeding it samples of real acoustic material. The Neural Network then creates a model based on weights and replicates the analog effect.',
+      title: 'IoT Anomaly Detection',
+      category: 'Machine Learning',
+      description: 'Implemented machine learning models for anomaly detection on IoT device data, achieving 94% accuracy using classification techniques. Utilized data mining approaches and Python libraries (Pandas, Scikit-learn, Seaborn) for data preprocessing, modeling, and visualization.',
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
-      tags: ['#python', '#fastapi', '#tensorflow'],
+      tags: ['#python', '#scikit-learn', '#pandas', '#seaborn'],
     },
     {
-      title: 'Nexool',
-      category: 'Education',
-      description: 'A new age language development platform offering an interactive digital library. With Data Science Nexool reinforces the Reading, Writing, Listening, Speaking skills of the students.',
+      title: 'Automobile Workshop Data Warehouse',
+      category: 'Data Engineering',
+      description: 'Designed and implemented a data warehouse for an automobile workshop, defining key business processes and lifecycle. Performance ETL from SSMS to Power BI in Visual Studio to extract, transform, and load data from multiple sources into datawarehouse.',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68e2c6b81d?w=400&h=300&fit=crop',
+      tags: ['#sql-server', '#power-bi', '#etl', '#data-warehouse'],
+    },
+    {
+      title: 'Ed-Tech Platform (MERN Stack)',
+      category: 'Full-Stack Development',
+      description: 'Developed a full-stack ed-tech platform using the MERN stack (MongoDB, ExpressJS, ReactJS, NodeJS). Built using MERN for seamless frontend-backend integration and scalability. Enabled insightful analytics and enhanced user experience.',
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop',
-      tags: ['#python', '#scikit-learn', '#NLTK'],
+      tags: ['#mongodb', '#express', '#react', '#nodejs'],
+    },
+    {
+      title: 'Gesture Recognition System',
+      category: 'Computer Vision',
+      description: 'Built a gesture recognition system to translate sign language into text for improved communication. Used TensorFlow and computer vision techniques for real-time gesture detection and transcription. Aimed to assist individuals with speech impairments through accessible technology.',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
+      tags: ['#tensorflow', '#computer-vision', '#python', '#real-time'],
     },
   ];
 
@@ -36,15 +43,15 @@ const Projects = () => {
           </h2>
           <div className="max-w-4xl">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Working with organizations, I have been implementing data driven solution across various 
-              domains. From providing meaningful insights with predictive analytics to implementing 
-              Machine and Deep learning models, I have been supporting ventures on all fronts. Here 
-              are some of the projects with my implementation:
+              Throughout my academic journey and professional experience, I have worked on diverse projects 
+              spanning machine learning, data engineering, full-stack development, and computer vision. 
+              From implementing anomaly detection models to building comprehensive data warehouses, 
+              these projects showcase my ability to deliver data-driven solutions across various domains.
             </p>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}

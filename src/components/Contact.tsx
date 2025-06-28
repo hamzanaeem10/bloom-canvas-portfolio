@@ -30,16 +30,33 @@ const Contact = () => {
 
   const techIcons = [
     { name: 'Python', icon: '🐍', color: 'bg-blue-500' },
-    { name: 'AWS', icon: '☁️', color: 'bg-orange-500' },
-    { name: 'FastAPI', icon: '⚡', color: 'bg-teal-500' },
+    { name: 'Machine Learning', icon: '🤖', color: 'bg-purple-500' },
+    { name: 'SQL Server', icon: '🗄️', color: 'bg-blue-700' },
+    { name: 'Power BI', icon: '📊', color: 'bg-yellow-600' },
+    { name: 'Azure', icon: '☁️', color: 'bg-blue-600' },
     { name: 'TensorFlow', icon: '🧠', color: 'bg-orange-600' },
-    { name: 'Docker', icon: '🐳', color: 'bg-blue-600' },
-    { name: 'SQL', icon: '🗄️', color: 'bg-blue-700' },
   ];
 
   return (
     <section id="contact" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-16 text-center">
+          <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">GET IN TOUCH</p>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+            Contact.
+          </h2>
+          <div className="max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 leading-relaxed mb-4">
+              Let's connect and discuss how we can work together on exciting data science projects.
+            </p>
+            <div className="text-gray-400 space-y-2">
+              <p>📧 hamzanaeem832@gmail.com</p>
+              <p>📱 +92 336 5496067</p>
+              <p>📍 Islamabad, Pakistan</p>
+            </div>
+          </div>
+        </div>
+
         <div className="flex lg:flex-row flex-col gap-12">
           {/* Left side - Contact Form */}
           <div className="lg:w-1/2">
