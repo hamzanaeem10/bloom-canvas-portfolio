@@ -1,106 +1,88 @@
 
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
       title: 'Satori',
-      description: 'AI-powered data visualization platform that transforms complex datasets into intuitive, interactive dashboards using advanced machine learning algorithms.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
-      tags: ['Python', 'TensorFlow', 'React', 'D3.js'],
-      demoUrl: '#',
-      githubUrl: '#',
+      category: 'Healthcare',
+      description: 'With Data Science at center, a well-being ecosystem aiming at encouraging users to build sustainable habits to thrive. We focus on well-being from a whole-person perspective.',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop',
+      tags: ['#python', '#scikit-learn', '#NLTK'],
     },
     {
       title: 'Neural Q',
-      description: 'Quantum-inspired neural network framework for solving optimization problems in financial markets and supply chain management.',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop',
-      tags: ['PyTorch', 'Quantum Computing', 'FastAPI', 'Docker'],
-      demoUrl: '#',
-      githubUrl: '#',
+      category: 'Audio Tech',
+      description: 'Using AI, we train a model from an analog device by feeding it samples of real acoustic material. The Neural Network then creates a model based on weights and replicates the analog effect.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+      tags: ['#python', '#fastapi', '#tensorflow'],
     },
     {
-      title: 'DataFlow',
-      description: 'Real-time data pipeline orchestration tool with automated ML model deployment and monitoring capabilities for enterprise applications.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop',
-      tags: ['Apache Kafka', 'Kubernetes', 'MLflow', 'PostgreSQL'],
-      demoUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'Insight Engine',
-      description: 'Natural language processing system that extracts actionable insights from unstructured business documents and reports.',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&h=300&fit=crop',
-      tags: ['BERT', 'Elasticsearch', 'AWS', 'Streamlit'],
-      demoUrl: '#',
-      githubUrl: '#',
+      title: 'Nexool',
+      category: 'Education',
+      description: 'A new age language development platform offering an interactive digital library. With Data Science Nexool reinforces the Reading, Writing, Listening, Speaking skills of the students.',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop',
+      tags: ['#python', '#scikit-learn', '#NLTK'],
     },
   ];
 
   return (
-    <section id="work" className="py-20 px-4 bg-slate-900/30">
+    <section id="work" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Featured Projects
+        <div className="mb-16">
+          <p className="text-sm text-slate-400 mb-4 uppercase tracking-wider">MY WORK</p>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+            Projects.
           </h2>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            A collection of projects that showcase my expertise in machine learning, 
-            data engineering, and full-stack development.
-          </p>
+          <div className="max-w-4xl">
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Working with organizations, I have been implementing data driven solution across various 
+              domains. From providing meaningful insights with predictive analytics to implementing 
+              Machine and Deep learning models, I have been supporting ventures on all fronts. Here 
+              are some of the projects with my implementation:
+            </p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group bg-slate-800/40 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/10"
+              className="group bg-gradient-to-b from-slate-800/40 to-slate-900/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/30 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-[1.02]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden h-48">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 right-4">
+                  <div className="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <div className="w-3 h-3 border border-white rounded-full"></div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-60"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="text-2xl font-bold mb-2 text-white">
                   {project.title}
                 </h3>
-                <p className="text-slate-400 mb-4 leading-relaxed">
+                <p className="text-sm text-cyan-400 mb-4">{project.category}</p>
+                <p className="text-slate-300 mb-6 leading-relaxed text-sm">
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 text-xs bg-slate-700/50 text-slate-300 rounded-full border border-slate-600/50"
+                      className="text-xs text-cyan-400 font-medium"
                     >
-                      #{tag.toLowerCase()}
+                      {tag}
                     </span>
                   ))}
-                </div>
-                
-                <div className="flex gap-3">
-                  <a
-                    href={project.demoUrl}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg text-sm transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
-                  >
-                    <ExternalLink size={16} />
-                    Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-slate-700 rounded-lg text-sm transition-all duration-300 border border-slate-600/50 hover:border-slate-500"
-                  >
-                    <Github size={16} />
-                    Code
-                  </a>
                 </div>
               </div>
             </div>

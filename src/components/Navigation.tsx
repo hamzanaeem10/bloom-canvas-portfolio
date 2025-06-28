@@ -16,7 +16,6 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Work', href: '#work' },
     { name: 'Contact', href: '#contact' },
@@ -32,8 +31,8 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            AM
+          <div className="text-lg font-medium text-yellow-400">
+            Arjun | Data Scientist
           </div>
 
           {/* Desktop Navigation */}
@@ -45,7 +44,7 @@ const Navigation = () => {
                 className="text-slate-300 hover:text-white transition-colors duration-300 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>

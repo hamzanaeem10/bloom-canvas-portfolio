@@ -1,52 +1,43 @@
 
 import React from 'react';
-import { Brain, Code, Database, Cpu } from 'lucide-react';
 
 const About = () => {
   const skills = [
     {
-      icon: Brain,
-      title: 'Machine Learning',
-      description: 'Advanced ML algorithms and deep learning frameworks',
+      title: 'ML/AI Engineer',
+      icon: '🔷',
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      icon: Code,
-      title: 'Python Development',
-      description: 'Full-stack development with modern Python frameworks',
-      color: 'from-green-500 to-emerald-500',
+      title: 'Python Developer',
+      icon: '🔶',
+      color: 'from-purple-500 to-pink-500',
     },
     {
-      icon: Database,
-      title: 'Data Engineering',
-      description: 'Big data processing and pipeline optimization',
-      color: 'from-purple-500 to-violet-500',
+      title: 'MLOps Engineer',
+      icon: '🔸',
+      color: 'from-teal-500 to-green-500',
     },
     {
-      icon: Cpu,
-      title: 'AI Solutions',
-      description: 'End-to-end AI product development and deployment',
-      color: 'from-orange-500 to-red-500',
+      title: 'Music Composer',
+      icon: '💎',
+      color: 'from-indigo-500 to-blue-500',
     },
   ];
 
   return (
     <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            About Me
+        <div className="mb-16">
+          <p className="text-sm text-slate-400 mb-4 uppercase tracking-wider">INTRODUCTION</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+            Overview
           </h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              I'm a passionate ML/AI Engineer with over 5 years of experience transforming complex data 
-              into actionable insights. I specialize in building intelligent systems that bridge the gap 
-              between raw data and human understanding, creating solutions that don't just process 
-              information—they tell stories.
-            </p>
+          <div className="max-w-4xl">
             <p className="text-lg text-slate-300 leading-relaxed">
-              My expertise spans machine learning, deep learning, and full-stack development, 
-              with a focus on creating scalable AI solutions that drive real business impact.
+              Developer turned Machine Learning Engineer, I tailor and implement data driven solutions 
+              to help breakthrough domains. My passion of maths backing ML/AI helps me design 
+              solutions that are just right.
             </p>
           </div>
         </div>
@@ -55,14 +46,17 @@ const About = () => {
           {skills.map((skill, index) => (
             <div
               key={skill.title}
-              className="group p-6 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/10"
+              className="group p-8 bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${skill.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <skill.icon size={24} className="text-white" />
+              <div className="mb-6">
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${skill.color} opacity-80 flex items-center justify-center text-2xl transform group-hover:rotate-12 transition-transform duration-300`}>
+                    {skill.icon}
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">{skill.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{skill.description}</p>
+              <h3 className="text-lg font-semibold text-white leading-tight">{skill.title}</h3>
             </div>
           ))}
         </div>
