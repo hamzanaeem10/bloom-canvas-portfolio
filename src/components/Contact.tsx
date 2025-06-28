@@ -38,12 +38,12 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="flex lg:flex-row flex-col gap-12">
           {/* Left side - Contact Form */}
           <div className="lg:w-1/2">
-            <div className="bg-gradient-to-b from-slate-800/40 to-slate-900/60 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/30">
+            <div className="bg-gradient-to-b from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-white text-lg font-medium mb-4">Your Name</label>
@@ -53,7 +53,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full bg-transparent border-b border-slate-600 text-slate-300 placeholder-slate-500 py-3 focus:outline-none focus:border-cyan-400 transition-colors"
+                    className="w-full bg-transparent border-b border-gray-600 text-gray-300 placeholder-gray-500 py-3 focus:outline-none focus:border-cyan-400 transition-colors"
                     placeholder="What's your name?"
                   />
                 </div>
@@ -66,7 +66,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full bg-transparent border-b border-slate-600 text-slate-300 placeholder-slate-500 py-3 focus:outline-none focus:border-cyan-400 transition-colors"
+                    className="w-full bg-transparent border-b border-gray-600 text-gray-300 placeholder-gray-500 py-3 focus:outline-none focus:border-cyan-400 transition-colors"
                     placeholder="What's your email?"
                   />
                 </div>
@@ -79,7 +79,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full bg-transparent border-b border-slate-600 text-slate-300 placeholder-slate-500 py-3 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                    className="w-full bg-transparent border-b border-gray-600 text-gray-300 placeholder-gray-500 py-3 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                     placeholder="What do you want to say?"
                   />
                 </div>

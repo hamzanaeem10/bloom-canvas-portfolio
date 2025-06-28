@@ -25,7 +25,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-900/90 backdrop-blur-md border-b border-slate-700/50'
+          ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50'
           : 'bg-transparent'
       }`}
     >
@@ -41,7 +41,7 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-300 hover:text-white transition-colors duration-300 relative group"
+                className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 group-hover:w-full"></span>
@@ -51,7 +51,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-slate-300 hover:text-white transition-colors"
+            className="md:hidden text-gray-300 hover:text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -60,12 +60,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mb-4 p-4">
+          <div className="md:hidden bg-black/95 backdrop-blur-md rounded-lg mb-4 p-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-slate-300 hover:text-white transition-colors duration-300"
+                className="block py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

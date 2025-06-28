@@ -26,15 +26,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <p className="text-sm text-slate-400 mb-4 uppercase tracking-wider">INTRODUCTION</p>
+          <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">INTRODUCTION</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
             Overview
           </h2>
           <div className="max-w-4xl">
-            <p className="text-lg text-slate-300 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Developer turned Machine Learning Engineer, I tailor and implement data driven solutions 
               to help breakthrough domains. My passion of maths backing ML/AI helps me design 
               solutions that are just right.
@@ -46,7 +46,7 @@ const About = () => {
           {skills.map((skill, index) => (
             <div
               key={skill.title}
-              className="group p-8 bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 text-center"
+              className="group p-8 bg-gradient-to-b from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6">

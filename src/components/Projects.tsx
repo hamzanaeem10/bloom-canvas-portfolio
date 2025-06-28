@@ -27,15 +27,15 @@ const Projects = () => {
   ];
 
   return (
-    <section id="work" className="py-20 px-4">
+    <section id="work" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <p className="text-sm text-slate-400 mb-4 uppercase tracking-wider">MY WORK</p>
+          <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">MY WORK</p>
           <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
             Projects.
           </h2>
           <div className="max-w-4xl">
-            <p className="text-lg text-slate-300 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Working with organizations, I have been implementing data driven solution across various 
               domains. From providing meaningful insights with predictive analytics to implementing 
               Machine and Deep learning models, I have been supporting ventures on all fronts. Here 
@@ -48,7 +48,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group bg-gradient-to-b from-slate-800/40 to-slate-900/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/30 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-[1.02]"
+              className="group bg-gradient-to-b from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/30 hover:border-gray-600/50 transition-all duration-300 hover:transform hover:scale-[1.02]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden h-48">
@@ -62,7 +62,7 @@ const Projects = () => {
                     <div className="w-3 h-3 border border-white rounded-full"></div>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
               </div>
               
               <div className="p-6">
@@ -70,7 +70,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <p className="text-sm text-cyan-400 mb-4">{project.category}</p>
-                <p className="text-slate-300 mb-6 leading-relaxed text-sm">
+                <p className="text-gray-300 mb-6 leading-relaxed text-sm">
                   {project.description}
                 </p>
                 
