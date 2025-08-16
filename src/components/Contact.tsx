@@ -1,5 +1,8 @@
 
 import React, { useState } from 'react';
+import { Send } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +11,7 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -18,14 +22,30 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      setFormData({ name: '', email: '', message: '' });
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact me directly at hamzanaeem832@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const techIcons = [
@@ -104,9 +124,22 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="text-white text-lg font-medium py-4 hover:text-cyan-400 transition-colors disabled:opacity-50"
+                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-lg rounded-xl overflow-hidden transition-all duration-300 hover:from-cyan-400 hover:to-blue-500 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/25 disabled:opacity-50 disabled:hover:scale-100 disabled:hover:shadow-none"
                 >
-                  {isSubmitting ? 'sending...' : 'send'}
+                  <span className="relative z-10 flex items-center gap-3">
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </>
+                    )}
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
               </form>
             </div>
